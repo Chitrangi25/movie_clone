@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+   <nav class="bg-black text-white">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <div>
+            <img src="https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940"
+                alt="Brand Logo" class="h-16 w-36" />
+        </div>
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="hover:underline hover:text-red-500">Home</a>
+            <a href="#" class="hover:underline hover:text-red-500">Movies & Shows</a>
+            <a href="#" class="hover:underline hover:text-red-500">Support</a>
+            <a href="#" class="hover:underline hover:text-red-500">Subscriptions</a>
+        </div>
+        <div class="hidden md:block">
+            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">
+                Login
+            </button>
+        </div>
+        <div class="md:hidden">
+            <button id="menu-btn" class="focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden bg-black text-white flex flex-col space-y-2 p-4 md:hidden">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#" class="hover:underline">Movies & Shows</a>
+        <a href="#" class="hover:underline">Support</a>
+        <a href="#" class="hover:underline">Subscriptions</a>
+        <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded">
+            Login
+        </button>
+    </div>
+   </nav>
+<div class="hero-section relative w-full h-screen bg-cover bg-center"
+    style="background-image: url('https://i.ytimg.com/vi/OoRR6pB-Lp0/maxresdefault.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center w-full h-full text-center text-white p-4">
+        <div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Harry Potter and the goblet of fire</h1>
+            <p class="text-base md:text-lg mb-6 max-w-2xl mx-auto">
+                With the help of his friends, Harry Potter must once again face the dark forces of Lord Voldemort in order to protect
+                the wizarding world. The fate of Hogwarts and the magical community lies in their hands, as they prepare to face the
+                ultimate battle. No matter the cost, they must stand together... for the future of magic.
+            </p>
+            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-md text-lg">
+                Play
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+  });
+</script>
+<div class="max-w-screen-xl mx-auto px-4 py-12">
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2">EXPLORE OUR WIDE VARIETY OF CATEGORIES</h1>
+        <p class="text-lg">Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new.</p>
+    </div>
+    <div class="min-h-screen flex items-center bg-black">
+        <div class="flex-1 max-w-6xl mx-auto p-10">
+          <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 12.18.33 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">Horror</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 12.12.55 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">Adventure</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 6.44.45 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">Mystery</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 12.14.33 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">Friendship</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 6.41.43 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">Comedy</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-12 at 10.25.11 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">High School Drama</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 6.23.31 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">Superhero</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 6.18.19 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bold">Philosophy</p>
+            </li>
+            <li class="bg-black rounded-lg shadow-xl transform hover:scale-105 transition-all duration-300">
+              <div class="relative h-96 sm:h-80 md:h-96 bg-gray-300 rounded-t-lg">
+                <img src="Screenshot 2025-01-09 at 6.44.19 PM.png" class="object-cover w-full h-full rounded-t-lg object-bottom"/>
+              </div>
+              <p class="text-center text-xl text-white mt-2 bg-black py-2 font-bolds font-bold">Kids</p>
+            </li>
+          </ul>
+        </div>
+    </div>
+</div>
+<footer class="bg-black text-white py-8 ">
+    <div class="container mx-auto flex flex-wrap justify-center text-center sm:justify-between">        
+        <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
+            <div class="font-bold text-xl mb-4">Home</div>
+            <div class="space-y-1">
+                <div>Categories</div>
+                <div>Devices</div>
+                <div>Pricing</div>
+                <div>FAQ</div>
+            </div>
+        </div>
+        <div class="w-full sm:w-1/2 lg:w-1/4 p-4">  
+            <div class="font-bold text-xl mb-4">Movies</div>
+            <div class="space-y-1">
+                <div>Games</div>
+                <div>Trending</div>
+                <div>New Releases</div>
+                <div>Popular</div>
+            </div>
+        </div>
+        <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
+            <div class="font-bold text-xl mb-4">Shows</div>
+            <div class="space-y-1">
+                <div>Genres</div>
+                <div>Trending</div>
+                <div>New Releases</div>
+                <div>Popular</div>
+            </div>
+        </div>
+        <div class="w-full sm:w-1/2 lg:w-1/4 p-4">
+            <h3 class="font-bold text-lg mb-2">Quick Links</h3>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover: underline hover:text-red-500">Privacy Policy</a></li>
+                <li><a href="#" class="hover: underline hover:text-red-500">Terms of Service</a></li>
+                <li><a href="#" class="hover: underline hover:text-red-500">Help Center</a></li>
+                <li><a href="#" class="hover: underline hover:text-red-500">Careers</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="border-t border-gray-700 pt-4 text-center text-sm">
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
